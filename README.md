@@ -1,0 +1,1 @@
+Trying to solve [Advent of Code](http://adventofcode.com/) in Rust!
