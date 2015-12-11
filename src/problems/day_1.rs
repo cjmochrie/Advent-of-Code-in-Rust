@@ -3,6 +3,8 @@ use std::fs::File;
 use std::io::prelude::*;
 use std::path::Path;
 
+// File opening from http://rustbyexample.com/std_misc/file/open.html
+
 /// Count parenthesis from input
 pub fn day_1() {
 	println!("here");
