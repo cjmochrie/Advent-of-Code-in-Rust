@@ -44,13 +44,18 @@ impl Eq for Point { }
 pub fn day_3() {
 	let s = utils::read_file("inputs/day3.txt");
 
+	// Keep track of visited locations with a set
 	let mut set: BTreeSet<Point> = BTreeSet::new();
 	let mut current_x = 0;
 	let mut current_y = 0;
 
 	let mut marker = false;
 
+	// Violates DRY but only once (This solves second part of problem not first)
 	set.insert(Point{x: current_x, y: current_y});
+
+	// current_x and current_y keep track of locations
+	// add a Point to the set for every visit
 	for c in s.chars() {
 		if marker {
 			match c {
@@ -84,7 +89,6 @@ pub fn day_3() {
 			marker = true;
 		}
 	}
-
 
 	println!("Santa and the robot have visited {} locations", set.len());
 }
